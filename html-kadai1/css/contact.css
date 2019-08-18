@@ -1,0 +1,38 @@
+.contact_form {
+  width: 630px;
+  float: left;
+  text-align: center;
+}
+
+.form tr {
+  height: 7rem;
+}
+
+.form th {
+  width: 150px;
+  text-align: right;
+  padding-right: 1rem;
+}
+
+.form td {
+}
+
+input[type="text"],textarea {
+  width: 480px;
+}
+
+.gender {
+  text-align: left;
+}
+
+.submit {
+  background-color: #6699CC;
+  font-size: 2rem;
+  color: #fff;
+  letter-spacing: 3px;
+  padding: 5px;
+}
+
+.submit:hover {
+  opacity: 0.6;
+}
