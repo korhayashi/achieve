@@ -1,0 +1,21 @@
+① $(document).ready(function(){ ~ });
+jQueryはhtmlの読み込みが完了してから操作を開始するため、readyイベントを使用し
+その中に処理を書く必要がある。
+
+② $('#btn-evaluation').click(function() { ~ });
+ランク判定ボタンにclickイベントを起こさせるもの。ランクの査定がされる。
+
+③ $('#national_language, #english, #mathematics, #science, #society').change(function() { ~ });
+各科目の点数が変動する度に合計点や平均点が変動するための関数。
+
+④ $('#national_language').val()
+国語のテキストフォームに入力された数値を取得している。
+
+⑤ Number()
+文字列を数値に変換している。
+
+⑥ $("#sum_indicate").text(sum);
+id名sum_indicateの文字列を変数sumに置き換えている。
+
+⑦ .append
+対象物に引数で指定したコンテンツを追加するメソッド。
