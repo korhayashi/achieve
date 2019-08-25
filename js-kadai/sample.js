@@ -21,12 +21,12 @@ $(document).ready(function(){
     $("#sum_indicate").text(sum);
 
     // ここに、上記を参考にして平均点を出力する処理を書き込む
-    let sum2 = 0;
+    // let sum2 = 0;
     let number = subject_points.length;
-    for (let i = 0; i < number; i++) {
-      sum2 += subject_points[i];
-    }
-    let average = sum2 / number;
+    // for (let i = 0; i < number; i++) {
+    //   sum2 += subject_points[i];
+    // }
+    let average = sum / number;
     $('#average_indicate').text(average);
 
     return subject_points;
