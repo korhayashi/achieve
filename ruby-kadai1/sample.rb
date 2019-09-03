@@ -11,12 +11,13 @@ end
 
 class Enemy
   def hand
-    return rand(0..2)
+    rand(0..2)
   end
 end
 
 class Janken
   def pon(player_hand, enemy_hand)
+    enemy = Enemy.new #enemyクラスのインスタンスを生成
     enemy_h =
       if enemy_hand == 0
         "グー"
@@ -39,7 +40,7 @@ class Janken
         puts "1:　チョキ"
         puts "2:　パー"
         your_hand = gets.chomp
-        pon(your_hand, rand(0..2))
+        pon(your_hand, enemy.hand)
     elsif result == 2
         puts "#{enemy_result}あなたの勝ちです。"
     elsif result == 1
@@ -51,7 +52,7 @@ class Janken
         puts "1:　チョキ"
         puts "2:　パー"
         your_hand = gets.chomp
-        pon(your_hand, rand(0..2))
+        pon(your_hand, enemy.hand)
     end
   end
 end
