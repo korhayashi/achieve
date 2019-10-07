@@ -9,10 +9,14 @@ module BlogsHelper
 
   def confirm_new_or_edit
     # ブログ新規投稿とアップデートに分岐したいが…
-    if action_name == 'new' || action_name == 'confirm'
+    unless @blog.id?
       blogs_path
-    elsif action_name == 'edit'
+    else
       blog_path
     end
+  end
+
+  def confirm_form_method
+    @blog.id ? 'patch' : 'post'
   end
 end
