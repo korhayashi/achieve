@@ -1,0 +1,29 @@
+<%= notice %>
+
+<% if @contact.errors.any? %>
+  <div class="error-message">
+    <ul>
+      <% @contact.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<%= form_with(model: @contact, local: true) do |form| %>
+  <div class="contact-form">
+    <%= form.label :Name %>
+    <div class="form-name">
+      <%= form.text_field :name %>
+    </div>
+    <%= form.label :Email %>
+    <div class="form-email">
+      <%= form.text_field :email %>
+    </div>
+    <%= form.label :Content %>
+    <div class="form-content">
+      <%= form.text_field :content %>
+    </div>
+    <%= form.submit 'Create Contact' %>
+  </div>
+<% end %>
