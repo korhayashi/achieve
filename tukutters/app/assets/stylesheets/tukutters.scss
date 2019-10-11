@@ -1,0 +1,66 @@
+$line-color: #E6ECF0;
+
+.container {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.form {
+  display: flex;
+}
+
+.left_view {
+  width: 15%;
+}
+
+.fa {
+  color: #14A1EF;
+}
+
+textarea {
+  border: 0px;
+  resize: none;
+  width: 512px;
+  height: 50px;
+}
+
+.menu_icon {
+  width: 29.72px;
+}
+
+.center_view {
+  width: 50%;
+  border-style: solid;
+  border-width: 0px 1px;
+  border-color: $line-color;
+}
+
+.default_icon {
+  width: 45px;
+}
+
+.tukutter_content {
+  display: flex;
+}
+
+.form {
+  border-style: solid;
+  border-width: 0px 0px 10px 0px;
+  border-color: $line-color;
+}
+
+.post_button {
+  text-align: right;
+}
+
+.tukutter_content_container {
+  border-style: solid;
+  border-width: 0px 0px 1px 0px;
+  border-color: $line-color;
+}
+
+.right_view {
+  width: 20%;
+  background-color: #14A1EF;
+}

@@ -1,0 +1,67 @@
+<div class="container">
+  <div class="left_view">
+    <div class="tukutter_icon">
+      <%= link_to tukutters_path do %>
+        <%= fa_icon("twitter 2x") %>
+      <% end %>
+    </div>
+    <div class="home">
+      <%= link_to tukutters_path do %>
+        <%= fa_icon("home 2x") %>ホーム
+      <% end %>
+    </div>
+    <div class="name">
+      <%= fa_icon("user-circle 2x") %>名前
+    </div>
+    <div class="btn tweet_btn">
+      <%= link_to "ツイート", '' %>
+    </div>
+  </div>
+
+  <div class="center_view">
+    <div class="form">
+      <div class="form_left">
+        <%= fa_icon("user-circle 4x") %>
+      </div>
+      <div class="form_right">
+        <%= form_with(model:@tukutter, local: true) do |form| %>
+          <div class="post_content">
+            <%= form.text_area :content, placeholder: "いまどうしてる？" %>
+          </div>
+          <div class="btn post_button">
+            <%= form.submit "ツイート", :class => 'btn_submit' %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="posts_list">
+      <% @posts.each do |post| %>
+        <div class="tukutter_content_container">
+          <div class="tukutter_content">
+            <div class="tukutter_content_left">
+              <%= fa_icon("user-circle 4x") %>
+            </div>
+            <div class="tukutter_content_right">
+              名前 - <span><%= time_ago_in_words(post.created_at) %></span>
+              <div class="tukutter_coment">
+                <%= post.content %>
+              </div>
+              <div class="edit_or_delete">
+                <%= link_to edit_tukutter_path(post.id) do %>
+                  <%= fa_icon("edit") %>
+                <% end %>
+                <%= link_to tukutter_path(post.id), method: :delete, data: {confirm: '本当に削除していいですか？'} do %>
+                  <%= fa_icon("trash") %>
+                <% end %>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="right_view">
+  </div>
+</div>

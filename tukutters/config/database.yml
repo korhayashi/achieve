@@ -1,0 +1,18 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: tukutters_development
+
+test:
+  <<: *default
+  database: tukutters_test
+
+production:
+  <<: *default
+  database: tukutters_production
+  username: tukutters
+  password: <%= ENV['TUKUTTERS_DATABASE_PASSWORD'] %>
