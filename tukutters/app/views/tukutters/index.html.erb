@@ -2,16 +2,16 @@
   <div class="left_view">
     <div class="tukutter_icon">
       <%= link_to tukutters_path do %>
-        <%= fa_icon("twitter 2x") %>
+        <%= fa_icon("twitter 2x", class: "icon") %>
       <% end %>
     </div>
     <div class="home">
       <%= link_to tukutters_path do %>
-        <%= fa_icon("home 2x") %>ホーム
+        <%= fa_icon("home 2x", text: "ホーム", class: "icon") %>
       <% end %>
     </div>
     <div class="name">
-      <%= fa_icon("user-circle 2x") %>名前
+      <%= fa_icon("user-circle 2x", text: "名前", class: "user_icon") %>
     </div>
     <div class="btn tweet_btn">
       <%= link_to "ツイート", '' %>
@@ -21,15 +21,15 @@
   <div class="center_view">
     <div class="form">
       <div class="form_left">
-        <%= fa_icon("user-circle 4x") %>
+        <%= fa_icon("user-circle 4x", class: "user_icon") %>
       </div>
       <div class="form_right">
         <%= form_with(model:@tukutter, local: true) do |form| %>
           <div class="post_content">
             <%= form.text_area :content, placeholder: "いまどうしてる？" %>
           </div>
-          <div class="btn post_button">
-            <%= form.submit "ツイート", :class => 'btn_submit' %>
+          <div class="post_button">
+            <%= form.submit "ツイート", :class => 'btn submit_btn' %>
           </div>
         <% end %>
       </div>
@@ -40,7 +40,7 @@
         <div class="tukutter_content_container">
           <div class="tukutter_content">
             <div class="tukutter_content_left">
-              <%= fa_icon("user-circle 4x") %>
+              <%= fa_icon("user-circle 4x", class: "user_icon") %>
             </div>
             <div class="tukutter_content_right">
               名前 - <span><%= time_ago_in_words(post.created_at) %></span>
@@ -49,10 +49,10 @@
               </div>
               <div class="edit_or_delete">
                 <%= link_to edit_tukutter_path(post.id) do %>
-                  <%= fa_icon("edit") %>
+                  <%= fa_icon("edit", class: "user_icon") %>
                 <% end %>
                 <%= link_to tukutter_path(post.id), method: :delete, data: {confirm: '本当に削除していいですか？'} do %>
-                  <%= fa_icon("trash") %>
+                  <%= fa_icon("trash", class: "user_icon") %>
                 <% end %>
               </div>
             </div>
