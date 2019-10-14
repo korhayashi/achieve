@@ -40,7 +40,6 @@ ul {
   top: 0;
   left: 0;
   width: 25%;
-  height: 100%;
   font-size: 1.7rem;
   font-weight: bold;
   z-index: 10;
@@ -177,7 +176,10 @@ textarea {
 
 .right_view {
   width: 30%;
-  height: 100%;
+  background-image: url('bg-image.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  opacity: 0.7;
 }
 
 .confirm {
@@ -185,6 +187,7 @@ textarea {
 }
 
 .link a {
+  margin: 20px;
   font-weight: bold;
   font-size: 1.7rem;
 }
