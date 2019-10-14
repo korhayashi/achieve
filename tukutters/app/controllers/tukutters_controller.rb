@@ -9,12 +9,14 @@ class TukuttersController < ApplicationController
   def create
     @tukutter = Tukutter.new(tukutter_params)
     if params[:back]
+      @posts = Tukutter.order(created_at: :desc)
       render :index
     else
       if @tukutter.save
         redirect_to tukutters_path, notice: "投稿しました"
       else
         # flash.now[:alert] = "投稿に失敗しました"
+        @posts = Tukutter.order(created_at: :desc)
         render :index
       end
     end
@@ -39,7 +41,8 @@ class TukuttersController < ApplicationController
 
   def confirm
     @tukutter = Tukutter.new(tukutter_params)
-    render :new if @tukutter.invalid?
+    @posts = Tukutter.order(created_at: :desc)
+    render :index if @tukutter.invalid?
   end
 
   private

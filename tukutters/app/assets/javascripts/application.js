@@ -14,3 +14,8 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+// = require jquery
+
+$(function() {
+  setTimeout("$('.flash_msg').fadeOut('slow')", 1000)
+})

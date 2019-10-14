@@ -46,6 +46,7 @@ ul {
   height: 100%;
   font-size: 1.7rem;
   font-weight: bold;
+  z-index: 10;
 }
 
 .error_msg p {
@@ -57,7 +58,18 @@ ul {
 }
 
 .left_content {
-  margin-bottom: 20px;
+  margin-bottom: 5px;
+  a {
+    display: inline-block;
+    transition: 0.2s;
+    &:hover {
+      background-color: #E7F5FD;
+      border-radius: 60px;
+    }
+    &:active {
+      background-color: #D0ECFC;
+    }
+  }
 }
 
 .tukutter_icon {
@@ -73,15 +85,25 @@ ul {
 }
 
 .left_icon {
-  margin-right: 15px;
+  padding: 10px;
+  vertical-align: middle;
 }
 
 .btn {
+  display: inline-block;
   background-color: #14A1EF;
   color: #ffffff;
   font-size: 1.6rem;
   font-weight: bold;
   border-radius: 25px;
+  transition: 0.2s;
+  &:hover {
+    cursor: pointer;
+    background-color: darken(#14A1EF, 5%);
+  }
+  &:active {
+    background-color: darken(#14A1EF, 10%);
+  }
 }
 
 .submit_btn {
@@ -115,6 +137,7 @@ textarea {
   background-color: $line-color;
   width: 100%;
   border: none;
+  margin: 0;
 }
 
 .post_under_line {
@@ -162,4 +185,9 @@ textarea {
 .right_view {
   width: 30%;
   height: 100%;
+}
+
+.link a {
+  font-weight: bold;
+  font-size: 1.7rem;
 }

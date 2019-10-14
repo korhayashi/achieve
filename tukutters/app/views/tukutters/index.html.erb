@@ -2,12 +2,12 @@
   <header class="left_view">
     <div class="left_content tukutter_icon">
       <%= link_to tukutters_path do %>
-        <%= fa_icon("twitter 2x", class: "icon left_icon") %>
+        <%= fa_icon("twitter 2x", class: "icon left_icon left_tukutter_icon") %>
       <% end %>
     </div>
     <div class="left_content home">
       <%= link_to tukutters_path do %>
-        <%= fa_icon("home 2x", text: "ホーム", class: "icon left_icon") %>
+        <%= fa_icon("home 2x", text: "ホーム　", class: "icon left_icon") %>
       <% end %>
     </div>
     <div class="left_content name">
@@ -20,6 +20,11 @@
   <div class="center_view">
     <%= render 'form' %>
     <hr class="form_under_line">
+    <% if notice %>
+      <div class="flash_msg">
+        <%= notice %>
+      </div>
+    <% end %>
     <% @posts.each do |post| %>
       <div class="tukutter_content">
         <div class="tukutter_content_left">
