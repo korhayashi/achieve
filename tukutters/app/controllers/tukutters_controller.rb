@@ -16,7 +16,7 @@ class TukuttersController < ApplicationController
         redirect_to tukutters_path, notice: "投稿しました"
       else
         @posts = Tukutter.order(created_at: :desc)
-        flash.now[:notice] = "投稿に失敗しました" #何故か表示されない        
+        flash.now[:notice] = "投稿に失敗しました"      
         render :index
       end
     end
@@ -41,6 +41,7 @@ class TukuttersController < ApplicationController
   def confirm
     @tukutter = Tukutter.new(tukutter_params)
     @posts = Tukutter.order(created_at: :desc)
+    flash.now[:notice] = "投稿に失敗しました"
     render :index if @tukutter.invalid?
   end
 
