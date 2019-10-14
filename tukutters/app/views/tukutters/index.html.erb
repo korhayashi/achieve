@@ -20,9 +20,9 @@
   <div class="center_view">
     <%= render 'form' %>
     <hr class="form_under_line">
-    <% if notice %>
+    <% if flash[:notice] %>
       <div class="flash_msg">
-        <%= notice %>
+        <%= flash[:notice] %>
       </div>
     <% end %>
     <% @posts.each do |post| %>

@@ -15,8 +15,8 @@ class TukuttersController < ApplicationController
       if @tukutter.save
         redirect_to tukutters_path, notice: "投稿しました"
       else
-        # flash.now[:alert] = "投稿に失敗しました"
         @posts = Tukutter.order(created_at: :desc)
+        flash.now[:notice] = "投稿に失敗しました" #何故か表示されない        
         render :index
       end
     end
@@ -29,7 +29,6 @@ class TukuttersController < ApplicationController
     if @tukutter.update(tukutter_params)
       redirect_to tukutters_path, notice: "編集しました"
     else
-      # flash.now[:alert] = "編集に失敗しました"
       render :edit
     end
   end
