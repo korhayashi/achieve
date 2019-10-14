@@ -47,6 +47,7 @@ ul {
 
 .empty_view {
   width: 25%;
+  border-right: $line-color solid 1px;
 }
 
 .left_content {
@@ -117,10 +118,6 @@ textarea {
 
 .center_view {
   width: 45%;
-  height: 100%;
-  border-style: solid;
-  border-width: 0px 1px;
-  border-color: $line-color;
   margin: 0;
 }
 
@@ -176,10 +173,12 @@ textarea {
 
 .right_view {
   width: 30%;
+  height: 999px;
   background-image: url('bg-image.jpg');
   background-size: cover;
   background-attachment: fixed;
   opacity: 0.7;
+  border-left: $line-color solid 1px;
 }
 
 .confirm {
