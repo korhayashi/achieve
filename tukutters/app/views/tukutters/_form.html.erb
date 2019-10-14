@@ -1,0 +1,22 @@
+<%= form_with(model:@tukutter, local: true, url: choose_index_or_edit) do |form| %>
+<div class="error_msg">
+  <% if @tukutter.errors.any? %>
+    <% @tukutter.errors.full_messages.each do |msg| %>
+      <p><%= msg %></p>
+    <% end %>
+  <% end %>
+</div>
+<div class="form">
+  <div class="form_left">
+    <%= fa_icon("user-circle 4x", class: "user_icon user_form_icon") %>
+  </div>
+  <div class="form_right">
+      <div class="post_content">
+        <%= form.text_area :content, placeholder: "いまどうしてる？" %>
+      </div>
+      <div class="post_btn">
+        <%= form.submit "ツイート", :class => 'btn submit_btn' %>
+      </div>
+    <% end %>
+  </div>
+</div>

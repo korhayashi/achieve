@@ -1,19 +1,26 @@
 $line-color: #E6ECF0;
 
+* {
+  box-sizing: border-box;
+}
+
 html {
   font-size: 62.5%;
 }
 
 html, body {
   height: 100%;
-  font-size: 1rem;
+}
+
+body {
+font-size: 1.5rem;
 }
 
 .container {
   height: 100%;
   display: flex;
-  justify-content: center;
-  margin: 0 auto;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
 
 a {
@@ -21,13 +28,40 @@ a {
   color: #000000;
 }
 
+ul {
+  list-style: none;
+}
+
 .form {
   display: flex;
+  padding: 10px;
 }
 
 .left_view {
-  width: 15%;
+  padding-left: 110px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 25%;
+  height: 100%;
+  font-size: 1.7rem;
   font-weight: bold;
+}
+
+.error_msg p {
+  color: red;
+}
+
+.empty_view {
+  width: 25%;
+}
+
+.left_content {
+  margin-bottom: 20px;
+}
+
+.tukutter_icon {
+  margin-top: 10px;
 }
 
 .icon {
@@ -38,32 +72,29 @@ a {
   color: #657785;
 }
 
+.left_icon {
+  margin-right: 15px;
+}
+
 .btn {
   background-color: #14A1EF;
   color: #ffffff;
-  font-size: 1rem;
+  font-size: 1.6rem;
   font-weight: bold;
-  border-radius: 30px;
-}
-
-.tweet_btn {
-  display: inline-block;
-  padding: 10px 50px;
-  a {
-    color: #ffffff;
-  }
+  border-radius: 25px;
 }
 
 .submit_btn {
   padding: 10px 20px;
+  border: 0px;
 }
 
 textarea {
   border: 0px;
   resize: none;
-  width: 512px;
+  width: 530px;
   height: 50px;
-  font-size: 1.2rem;
+  font-size: 1.7rem;
 }
 
 .menu_icon {
@@ -71,43 +102,64 @@ textarea {
 }
 
 .center_view {
-  width: 50%;
+  width: 45%;
+  height: 100%;
   border-style: solid;
   border-width: 0px 1px;
   border-color: $line-color;
+  margin: 0;
 }
 
-.default_icon {
-  width: 45px;
+.form_under_line {
+  height: 10px;
+  background-color: $line-color;
+  width: 100%;
+  border: none;
+}
+
+.post_under_line {
+  height: 1px;
+  background-color: $line-color;
+  width: 100%;
+  border: none;
+}
+
+.user_form_icon {
+  margin-right: 10px;
 }
 
 .tukutter_content {
   display: flex;
+  width: 100%;
+  margin: 10px;
 }
 
-.form {
-  border-style: solid;
-  border-width: 0px 0px 10px 0px;
-  border-color: $line-color;
-}
-
-.post_button {
+.post_btn {
   text-align: right;
 }
 
-.tukutter_content_container {
-  border-style: solid;
-  border-width: 0px 0px 1px 0px;
-  border-color: $line-color;
+.user_post_icon {
+  margin-right: 10px;
 }
 
-.posts_list {
-  border-style: solid;
-  border-width: 0px 0px 10px 0px;
-  border-color: $line-color;
+.tukutter_name {
+  font-weight: bold;
+}
+
+.created_at {
+  font-size: 1.2rem;
+  color: #657785;
+}
+
+.edit_or_delete {
+  padding: 5px 0;
+}
+
+.edit_icon {
+  margin-right: 50px;
 }
 
 .right_view {
-  width: 20%;
-  background-color: #14A1EF;
+  width: 30%;
+  height: 100%;
 }
