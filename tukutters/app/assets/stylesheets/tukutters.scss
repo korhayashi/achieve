@@ -18,15 +18,12 @@ body {
 .container {
   height: 100%;
   display: flex;
+  justify-content: flex-end;
 }
 
 a {
   text-decoration: none;
   color: #000000;
-}
-
-ul {
-  list-style: none;
 }
 
 .form {
@@ -43,11 +40,6 @@ ul {
   font-size: 1.7rem;
   font-weight: bold;
   z-index: 10;
-}
-
-.empty_view {
-  width: 25%;
-  border-right: $line-color solid 1px;
 }
 
 .left_content {
@@ -118,7 +110,9 @@ textarea {
 
 .center_view {
   width: 45%;
-  margin: 0;
+  // margin: 0;
+  border-left: $line-color solid 1px;
+  border-right: $line-color solid 1px;
 }
 
 .form_under_line {
@@ -142,7 +136,7 @@ textarea {
 
 .tukutter_content {
   display: flex;
-  width: 100%;
+  width: 98%;
   margin: 10px;
 }
 
@@ -178,7 +172,6 @@ textarea {
   background-size: cover;
   background-attachment: fixed;
   opacity: 0.7;
-  border-left: $line-color solid 1px;
 }
 
 .confirm {
