@@ -167,7 +167,7 @@ textarea {
 
 .right_view {
   width: 30%;
-  height: 999px;
+  min-height: 100vh;
   background-image: url('bg-image.jpg');
   background-size: cover;
   background-attachment: fixed;
